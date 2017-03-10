@@ -158,7 +158,6 @@
                                                 <br/>
                                                 <span>ราคา dealer : </span><span class="text-danger" ng-bind="<?php echo $product['member_discount'];?> | currency:'฿':0"></span>
                                                 <br/>
-                                                <span>ราคา Hotel : </span><span class="text-danger" ng-bind="<?php echo $product['member_discount_lv1'];?> | currency:'฿':0"></span>
                                             </td>
                                             <td>
                                                 <?php if ($product['is_promotion']=="1"): ?>
@@ -286,17 +285,10 @@
                             <div class="form-group">
                                 <label class="col-md-3 control-label" for="member_discount">ราคา dealer</label>
                                 <div class="col-md-4">
-                                    <input id="member_discount" name="member_discount" type="number" placeholder="ราคา Dealer LV0" class="form-control input-md">
+                                    <input id="member_discount" name="member_discount" type="number" placeholder="ราคา Dealer" class="form-control input-md">
                                 </div>
                             </div>
 
-                            <!-- Text input-->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="member_discount_lv1">ราคา Hotel</label>
-                                <div class="col-md-4">
-                                    <input id="member_discount_lv1" name="member_discount_lv1" type="number" placeholder="ราคา Dealer LV1" class="form-control input-md">
-                                </div>
-                            </div>
                             <!-- Text input-->
                             <div class="form-group">
                                 <label class="col-md-3 control-label" for="stock">สินค้าคงเหลือ</label>

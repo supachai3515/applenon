@@ -1,12 +1,12 @@
 RewriteEngine on
 # redirect www to non-www
-#RewriteCond %{HTTP_HOST} ^www\.hotelsupply\.in.th$ [NC]
-#RewriteRule ^(.*)$ http://hotelsupply.in.th/$1 [L,R=301]
+#RewriteCond %{HTTP_HOST} ^www\.applenon\.in.th$ [NC]
+#RewriteRule ^(.*)$ http://applenon.com/$1 [L,R=301]
 
-RewriteCond %{HTTP_HOST} ^hotelsupply\.in.th$ [NC]
-RewriteRule ^(.*)$ http://www.hotelsupply.in.th/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^applenon\.in.th$ [NC]
+RewriteRule ^(.*)$ http://www.applenon.com/$1 [L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?$1
-ErrorDocument 404 http://www.hotelsupply.in.th/demo/notfound
+ErrorDocument 404 http://www.applenon.com/demo/notfound

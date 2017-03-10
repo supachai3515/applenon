@@ -109,16 +109,6 @@
             </div>
         </div>
 
-    
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-3 control-label" for="member_discount_lv1">ราคา Hotel</label>
-            <div class="col-md-4">
-                <input id="member_discount_lv1" name="member_discount_lv1" type="number" value="<?php echo $product_data['member_discount_lv1']; ?>" placeholder="ราคา Dealer LV1" class="form-control input-md">
-            </div>
-        </div>
-
-
 		<!-- Text input-->
 		<div class="form-group">
 		  <label class="col-md-3 control-label" for="stock">สินค้าคงเหลือ</label>  

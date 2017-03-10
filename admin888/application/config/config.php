@@ -19,17 +19,17 @@ $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
 $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 
 //Config by user
-$config['sitename'] = "HotelSupply";
-$config['tagline'] = "HotelSupply";
-$config['url_img'] = "http://localhost/hotelsupply/";
-$config['no_url_img'] = "http://localhost/hotelsupply/uploads/no_image.jpg";
+$config['sitename'] = "applenon";
+$config['tagline'] = "applenon";
+$config['url_img'] = "http://localhost/applenon/";
+$config['no_url_img'] = "http://localhost/applenon/uploads/no_image.jpg";
 
-$config['email_name'] = "hotelsupply";
+$config['email_name'] = "applenon";
 //$config['email_owner'] = "bboycomputershop@gmail.com";
-$config['email_owner'] = "hotelsupplyinth@gmail.com";
-$config['email_noreply'] = "hotelsupplyinth@gmail.com";
+$config['email_owner'] = "applenon@gmail.com";
+$config['email_noreply'] = "applenon@gmail.com";
 $config['pass_mail_noreply'] = "1Q2W3E4R";
-$config['weburl'] = "http://localhost/hotelsupply/";
+$config['weburl'] = "http://localhost/applenon/";
 
 $config['payment_transfer'] = '<h4>ธนาคารกรุงเทพ</h4>
 								<p>ชื่อบัญชี : นิรันดร์ พงศ์กิตติ์วิศาล<br/>

@@ -121,7 +121,7 @@ class Po_checkout extends CI_Controller {
 
 
 			    $this->db->trans_begin();
-			    $ref_order_id = md5("hotelsupply".date("YmdHis")."hotelsupply_gen_order_id");
+			    $ref_order_id = md5("applenon".date("YmdHis")."applenon_gen_order_id");
 			    $order_id="";
 			    if($quantity == 0){
 			    	redirect('dealer_po','refresh');
