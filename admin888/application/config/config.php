@@ -25,28 +25,16 @@ $config['url_img'] = "http://localhost/applenon/";
 $config['no_url_img'] = "http://localhost/applenon/uploads/no_image.jpg";
 
 $config['email_name'] = "applenon";
-//$config['email_owner'] = "bboycomputershop@gmail.com";
-$config['email_owner'] = "applenon@gmail.com";
-$config['email_noreply'] = "applenon@gmail.com";
-$config['pass_mail_noreply'] = "1Q2W3E4R";
+$config['email_owner'] = "supachai.wi@gmail.com";
+$config['email_noreply'] = "applenon.fix@gmail.com";
+$config['pass_mail_noreply'] = "@pplen0n";
 $config['weburl'] = "http://localhost/applenon/";
 
 $config['payment_transfer'] = '<h4>ธนาคารกรุงเทพ</h4>
-								<p>ชื่อบัญชี : นิรันดร์ พงศ์กิตติ์วิศาล<br/>
-								เลขที่บัญชี 0870 017 217
-								</p>
 								<h4>ธนาคารไทยพาณิชย์</h4>
-								<p>ชื่อบัญชี : นิรันดร์ พงศ์กิตติ์วิศาล<br/>
-								เลขที่บัญชี 1402 478 368
-								</p>
 								<h4>ธนาคารกสิกร</h4>
-								<p>ชื่อบัญชี : พิชชานันท์ พงศ์กิตติ์วิศาล<br/>
-								เลขที่บัญชี 6972 000 270
-								</p>
 								<h4>ธนาคารกรุงไทย</h4>
-								<p>ชื่อบัญชี : นิรันดร์ พงศ์กิตติ์วิศาล<br/>
-								เลขที่บัญชี 9849 831 162
-								</p>';
+								';
 
 /*
 |--------------------------------------------------------------------------

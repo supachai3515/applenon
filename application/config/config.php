@@ -28,27 +28,16 @@ $config['no_url_img'] = "http://www.applenon.com/uploads/no_image.jpg";
 
 $config['email_name'] = "applenon";
 //$config['email_owner'] = "bboycomputershop@gmail.com";
-$config['email_owner'] = "applenon@gmail.com";
-$config['email_noreply'] = "applenon@gmail.com";
-$config['pass_mail_noreply'] = "1Q2W3E4R";
+$config['email_owner'] = "supachai.wi@gmail.com";
+$config['email_noreply'] = "applenon.fix@gmail.com";
+$config['pass_mail_noreply'] = "@pplen0n";
 $config['weburl'] = "http://www.applenon.com/";
 
 $config['payment_transfer'] = '<h4>ธนาคารกรุงเทพ</h4>
-				<p>ชื่อบัญชี : นิรันดร์ พงศ์กิตติ์วิศาล<br/>
-				เลขที่บัญชี xxxxxxxxxx
-				</p>
-				<h4>ธนาคารไทยพาณิชย์</h4>
-				<p>ชื่อบัญชี : นิรันดร์ พงศ์กิตติ์วิศาล<br/>
-				เลขที่บัญชี xxxxxxxxxx
-				</p>
-				<h4>ธนาคารกสิกร</h4>
-				<p>ชื่อบัญชี : พิชชานันท์ พงศ์กิตติ์วิศาล<br/>
-				เลขที่บัญชี xxxxxxxxxx
-				</p>
-				<h4>ธนาคารกรุงไทย</h4>
-				<p>ชื่อบัญชี : นิรันดร์ พงศ์กิตติ์วิศาล<br/>
-				เลขที่บัญชี xxxxxxxxxx
-				</p>';
+								<h4>ธนาคารไทยพาณิชย์</h4>
+								<h4>ธนาคารกสิกร</h4>
+								<h4>ธนาคารกรุงไทย</h4>
+								';
 								/*
 |--------------------------------------------------------------------------
 | Index File
