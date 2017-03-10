@@ -65,9 +65,7 @@ class Members_model extends CI_Model {
 			'address_receipt' => $this->input->post('address_receipt'),
 			'address_tax' => $this->input->post('address_tax'),
 			'verify' => $this->input->post('verify'),
-			'is_active' => $this->input->post('isactive'),
-			'is_lavel1' => $this->input->post('is_lavel1')						
-		);
+			'is_active' => $this->input->post('isactive')		);
 		$where = "id = '".$member_id."'"; 
 		$this->db->update("members", $data_member, $where);
 

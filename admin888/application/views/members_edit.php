@@ -130,24 +130,6 @@
 			</div>
 		  </div>
 		</div>
-		
-		<!-- Multiple Checkboxes -->
-		<div class="form-group">
-		  <label class="col-md-3 control-label" for="is_lavel1">ยืนยัน Dealer Hotel</label>
-		  <div class="col-md-4">
-		  <div class="checkbox">
-		    <label for="isactive-0">
-		      <input type="checkbox" name="is_lavel1" id="isactive-0" value="1" 
-		      <?php if ($member_data['is_lavel1']==1): ?>
-		      	<?php echo "checked"; ?>
-		      <?php endif ?>
-		      >
-		      ใช้งาน
-		    </label>
-			</div>
-		  </div>
-		</div>
-
 		<!-- Multiple Checkboxes -->
 		<div class="form-group">
 		  <label class="col-md-3 control-label" for="isactive">ใช้งาน</label>
