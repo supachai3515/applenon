@@ -63,8 +63,8 @@
         }(document, 'script', 'facebook-jssdk'));
         </script>
         <div class="add-banner-carsuol">
-            <div class="fb-page" data-href="https://www.facebook.com/%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B8%88%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B9%81%E0%B8%9A%E0%B8%95%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%88-Notebook-bboycomputer-1563145163982000/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                <blockquote cite="https://www.facebook.com/%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B8%88%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B9%81%E0%B8%9A%E0%B8%95%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%88-Notebook-bboycomputer-1563145163982000/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B8%88%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B9%81%E0%B8%9A%E0%B8%95%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%88-Notebook-bboycomputer-1563145163982000/">อะไหล่โน๊ตบุ๊ค จอโน๊ตบุ๊ค  แบตเตอร์รี่ Notebook - bboycomputer</a></blockquote>
+            <div class="fb-page" data-href="https://www.facebook.com/applehomefix/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/applehomefix/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/applehomefix/">จำหน่ายอะไหล่  ซ่อม MacBook iMac - Applenon.com</a></blockquote>
             </div>
         </div>
     </div>

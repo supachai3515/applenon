@@ -41,7 +41,6 @@
                                     <option value="ธนาคารกรุงเทพ">ธนาคารกรุงเทพ</option>
                                     <option value="ธนาคารไทยพาณิชย์">ธนาคารไทยพาณิชย์</option>
                                     <option value="ธนาคารกสิกรไทย">ธนาคารกสิกรไทย</option>
-                                    <option value="ธนาคารกรุงไทย">ธนาคารกรุงไทย</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -77,8 +76,8 @@
                         </div>
                         <div class="col-sm-9">
                             <h4>ธนาคารกรุงเทพ</h4>
-                            <p>เลขที่บัญชี : 0870 017 217
-                                <br> ชื่อบัญชี : นิรันดร์ พงศ์กิตติ์วิศาล
+                            <p>เลขที่บัญชี : 917-009-963-5
+                                <br> ชื่อบัญชี : นาย รังษี ไตรวงศ์ย้อย
                                 <br>
                             </p>
                         </div>
@@ -89,8 +88,8 @@
                         </div>
                         <div class="col-sm-9">
                             <h4>ธนาคารไทยพาณิชย์</h4>
-                            <p>เลขที่บัญชี : 1402 478 368
-                                <br> ชื่อบัญชี : นิรันดร์ พงศ์กิตติ์วิศาล
+                            <p>เลขที่บัญชี : 388-202-210-3
+                                <br> ชื่อบัญชี : นาย รังษี ไตรวงศ์ย้อย
                                 <br>
                         </div>
                     </div>
@@ -100,19 +99,8 @@
                         </div>
                         <div class="col-sm-9">
                             <h4>ธนาคารกสิกรไทย</h4>
-                            <p>เลขที่บัญชี : 6972 000 270
-                                <br> ชื่อบัญชี : พิชชานันท์ พงศ์กิตติ์วิศาล
-                                <br>
-                        </div>
-                    </div>
-                    <div class="row bank-payment">
-                        <div class="col-sm-3" style=" margin:0 auto;">
-                            <img src="<?php echo base_url('theme'); ?>/img/ktb.png" class="img-responsive img-rounded" alt="Image">
-                        </div>
-                        <div class="col-sm-9">
-                            <h4>ธนาคารกรุงไทย</h4>
-                            <p>เลขที่บัญชี : 9849 831 162
-                                <br> ชื่อบัญชี : นิรันดร์ พงศ์กิตติ์วิศาล
+                            <p>เลขที่บัญชี : 697-213-284-3
+                                <br> ชื่อบัญชี : นาย รังษี ไตรวงศ์ย้อย
                                 <br>
                         </div>
                     </div>
@@ -122,7 +110,7 @@
                     </div>
                     <div class="">
                         <p><strong>แจ้งชำระเงินผ่านทาง line : </strong>
-                            <span class="fa fa-comment"></span> LINE ID : bboynotebook2
+                            <span class="fa fa-comment"></span> LINE ID : <?php echo $this->config->item('line_id') ?>
                         </p>
                     </div>
                 </div>

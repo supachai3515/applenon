@@ -3943,22 +3943,6 @@ audio.audio-format {
   padding-top: 20px;
 }
 
-.stick-top {
-    top: 0;
-}
-.stick-right {
-    right: 0;
-}
-.black-ribbon {
-  position: fixed;
-  z-index: 9999;
-  width: 70px;
-}
-@media only all and (min-width: 768px) {
-  .black-ribbon {
-    width: auto;
-  }
-}
 
 .outof-stock a {
     border-radius: 5px;

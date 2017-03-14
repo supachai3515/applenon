@@ -1,9 +1,9 @@
 RewriteEngine on
 # redirect www to non-www
-#RewriteCond %{HTTP_HOST} ^www\.applenon\.in.th$ [NC]
+#RewriteCond %{HTTP_HOST} ^www\.applenon\.com$ [NC]
 #RewriteRule ^(.*)$ http://applenon.com/$1 [L,R=301]
 
-RewriteCond %{HTTP_HOST} ^applenon\.in.th$ [NC]
+RewriteCond %{HTTP_HOST} ^applenon\.com$ [NC]
 RewriteRule ^(.*)$ http://www.applenon.com/$1 [L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -41,7 +41,6 @@
     <script src="<?php echo base_url('theme');?>/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body class="home-2" ng-app="myApp" ng-controller="mainCtrl">
-<img src="http://www.wisadev.com/wp-content/uploads/2016/11/black_ribbon_top_right.png" class="black-ribbon stick-top stick-right">
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -69,7 +68,7 @@
                                 <nav>
                                     <ul>
                                         <li class="current"><a href="<?php echo base_url('dealer')?>"><i class="fa fa-user" aria-hidden="true"></i> Dealer</a></li>
-                                        <li><a href="https://www.facebook.com/%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B8%88%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B9%81%E0%B8%9A%E0%B8%95%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%88-Notebook-bboycomputer-1563145163982000/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
+                                        <li><a href="https://www.facebook.com/applehomefix/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
                                         <li><a href="<?php echo base_url('cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ตะกร้าสินค้า</a></li>
                                     </ul>
                                 </nav>

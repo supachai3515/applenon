@@ -13,9 +13,9 @@
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="our-company">
                     <h2 class="sub-section-title">
-                        B-Boy Computer
+                        Applenon (แอปเปิ้ลนนท์)
                     </h2>
-                    <h3 class="dark">ทางร้านเรามีบริการ ซ่อมโน๊ตบุ๊ค เปลี่ยนอะไหล่ หรือ รับสั่งอะไหล่โน๊ตบุ๊ค จากโรงงาน ที่มีคุณภาพ </h3>
+                    <h3 class="dark">ทางร้านเรามีบริการ จำหน่ายอะไหล่ ซ่อม MacBook iMac</h3>
                     <p>เราใส่ใจในการบริการลูกค้าอย่างจริงจัง เต็มที่กับการให้บริการในทุกเรื่อง ดังนั้นหากท่านมีข้อสงสัยหรือปัญหาใดๆ ท่านสามารถ ที่จะติดต่อ เราผ่านช่องทางการติดต่อต่างๆได้ทันที</p>
                     <ul>
                         <li>
@@ -42,8 +42,9 @@
                       fjs.parentNode.insertBefore(js, fjs);
                     }(document, 'script', 'facebook-jssdk'));</script>
                         <div class="add-banner-carsuol">
-
-                           <div class="fb-page" data-href="https://www.facebook.com/%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B8%88%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B9%81%E0%B8%9A%E0%B8%95%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%88-Notebook-bboycomputer-1563145163982000/"  data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B8%88%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B9%81%E0%B8%9A%E0%B8%95%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%88-Notebook-bboycomputer-1563145163982000/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B8%88%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B9%81%E0%B8%9A%E0%B8%95%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%88-Notebook-bboycomputer-1563145163982000/">อะไหล่โน๊ตบุ๊ค จอโน๊ตบุ๊ค  แบตเตอร์รี่ Notebook - bboycomputer</a></blockquote></div>
+                            <div class="fb-page" data-href="https://www.facebook.com/applehomefix/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/applehomefix/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/applehomefix/">จำหน่ายอะไหล่  ซ่อม MacBook iMac - Applenon.com</a></blockquote>
+                            </div>
                         </div>
                 </div>
             </div>
@@ -52,15 +53,13 @@
                     <h2 class="sub-section-title">
                         ติดต่อทางร้าน
                     </h2>
-                    <img src="<?php echo base_url('theme');?>/img/banner/bboy.jpg" class="img-thumbnail img-responsive" alt="">
-                    <h3 class="dark">ร้าน บีบอย คอม (www.bboycomputer.com)</h3>
+                    <h3 class="dark">Applenon (Applenon.com)</h3>
                     <address>
-                        <p><i class="fa fa-map-marker"></i> อาคารพันธุ์ทิพย์ พลาซ่า สาขา งามวงศ์วาน เลขที่ 69/21 หมู่ 2 ชั้น5 (5059) ถ.งามวงศ์วาน ต.บางเขน อ.เมือง จ. นนทบุรี 11000</p>
-                        <p><i class="fa fa-phone"></i> Mobile: 086-9938463 , 086-5556039</p>
-                        <p><i class="fa fa-phone"></i> Phone: 02-9536231</p>
-                        <p><i class="fa fa-envelope-o"></i> Email: bboycomputershop@gmail.com</p>
-                        <p><i class="fa fa-comment"></i> Line Id: bboynotebook2</p>
-                        <img src="<?php echo base_url('theme');?>/img/banner/line-bboy.jpg" class="img-thumbnail img-responsive" alt="Image">
+                        <p><i class="fa fa-map-marker"></i> 384/241 หมู่ 2 หมู่บ้านเดอะทรัสต์ซิตี้ ถนนงามวงศ์วาน ตำบลบางเขน อำเภอเมืองนนทบุรี จังหวัด นนทบุรี 11000</p>
+                        <p><i class="fa fa-phone"></i> Mobile: 089 525 5225</p>
+                        <p><i class="fa fa-envelope-o"></i> Email: applenon.fix@gmail.com</p>
+                        <p><i class="fa fa-comment"></i> Line Id: @applenon</p>
+                        <img src="<?php echo base_url('theme');?>/img/banner/line-at.jpg" class="img-thumbnail img-responsive" alt="Image">
                     </address>
                 </div>
             </div>
@@ -82,9 +81,12 @@
                     </div>
                     <h3 class="dark">จากคุณ มงคล</h3>
                 </div>
+               <!--
                 <a class="fancybox-thumb" data-fancybox-group="group" href="<?php echo base_url('theme');?>/img/banner/map-bboycomputer.jpg">
 				<img  class="img-thumbnail img-responsive" src="<?php echo base_url('theme');?>/img/banner/map-bboycomputer.jpg" alt="แผนที่ร้าน bboycomputer">
 				</a>
+                -->
+                <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1964.9575659182462!2d100.53813497545941!3d13.86469800715512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x72238bfbe546b222!2z4LmA4LiU4Lit4Liw4LiX4Lij4Lix4Liq4LiV4LmM4LiL4Li04LiV4Li14LmJ!5e0!3m2!1sth!2sth!4v1489478353020" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
             </div>
         </div>
         </div>

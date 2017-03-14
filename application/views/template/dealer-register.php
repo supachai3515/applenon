@@ -48,7 +48,7 @@
             <form  ng-submit="saveDealer()"> 
 
 				<legend>สมัครสมาชิก Dealer </legend>
-                <p>ร้าน B-Boy มีการบริการสำหรับร้านค้า/ บริษัท / หน่วยงานราชการ ที่ต้องการสั่งสินค้าในราคาที่ถูกกว่า หน้าเว็ป สนใจจะสมัครเป็น Dealer </p>
+                <p><?php echo $this->config->item('sitename') ?> มีการบริการสำหรับร้านค้า/ บริษัท / หน่วยงานราชการ ที่ต้องการสั่งสินค้าในราคาที่ถูกกว่า หน้าเว็ป สนใจจะสมัครเป็น Dealer </p>
 
                 <div class="form-group">  
 				    <input ng-model="dealer.name" class="form-control"  id="name" name="name" placeholder="ชื่อจริง"  required="required" type="text">

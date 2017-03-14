@@ -19,7 +19,7 @@ $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
 $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 
 //Config by user
-$config['sitename'] = "applenon";
+$config['sitename'] = "Applenon (แอปเปิ้ลนนท์)";
 $config['tagline'] = "applenon";
 $config['author'] = "applenon";
 $config['kayword'] = "applenon";
@@ -27,16 +27,19 @@ $config['url_img'] = "http://www.applenon.com/";
 $config['no_url_img'] = "http://www.applenon.com/uploads/no_image.jpg";
 
 $config['email_name'] = "applenon";
-//$config['email_owner'] = "bboycomputershop@gmail.com";
-$config['email_owner'] = "supachai.wi@gmail.com";
+$config['email_owner'] = "applenon.fix@gmail.com";
 $config['email_noreply'] = "applenon.fix@gmail.com";
 $config['pass_mail_noreply'] = "@pplen0n";
 $config['weburl'] = "http://www.applenon.com/";
+$config['line_id'] = "@applenon";
 
 $config['payment_transfer'] = '<h4>ธนาคารกรุงเทพ</h4>
+								<p>917-009-963-5 นาย รังษี ไตรวงศ์ย้อย</p>
 								<h4>ธนาคารไทยพาณิชย์</h4>
+								<p>388-202-210-3 นาย รังษี ไตรวงศ์ย้อย</p>
 								<h4>ธนาคารกสิกร</h4>
-								<h4>ธนาคารกรุงไทย</h4>
+								<p>697-213-284-3 นาย รังษี ไตรวงศ์ย้อย</p>
+
 								';
 								/*
 |--------------------------------------------------------------------------
