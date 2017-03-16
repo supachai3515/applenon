@@ -40,7 +40,7 @@
                                         <?php  $i== 1 ;foreach ($menu_type as $master): ?>
                                         <?php if ($i < 6): ?>
                                             <li><a href="<?php echo base_url('products/category/'.$master['slug']) ?>">
-                                            <?php echo $master['name'] ?> (<?php echo $master['count_product'] ?>)
+                                            <?php echo $master['name'] ?>
                                         </a></li>
                                             
                                         <?php endif ?>
@@ -60,7 +60,7 @@
                                         <?php $i=0; $i== 1 ;foreach ($menu_type as $master): ?>
                                         <?php if ($i > 5): ?>
                                             <li><a href="<?php echo base_url('products/category/'.$master['slug']) ?>">
-                                            <?php echo $master['name'] ?> (<?php echo $master['count_product'] ?>)
+                                            <?php echo $master['name'] ?>
                                         </a></li>
                                             
                                         <?php endif ?>
