@@ -19,7 +19,7 @@ $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
 $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 
 //Config by user
-$config['sitename'] = "Applenon (แอปเปิ้ลนนท์)";
+$config['sitename'] = "Applenon (แอปเปิ้ลนน)";
 $config['tagline'] = "applenon";
 $config['author'] = "applenon";
 $config['kayword'] = "applenon";

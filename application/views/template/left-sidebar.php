@@ -7,22 +7,43 @@
         <div class="category-menu" id="cate-toggle">
             <ul>
                 <?php foreach ($menu_type as $master): ?>
-                <li class="has-sub">
-                    <a href="#">
-                        <?php echo $master['name']; ?>
-                    </a>
-                    <ul class="category-sub">
-                        <?php foreach ($menu_sub_type as $sub): ?>
-                        <?php if ($master['id'] == $sub['parenttype_id'] && $sub['name'] !=""): ?>
-                        <li class="sub-category">
-                            <a href="<?php echo base_url('products/category/'.$sub['slug']) ?>">
-                                <?php echo  $sub['name']; ?> <span>(<?php echo $sub['count_product'] ?>)</span></a>
-                        </li>
-                        <?php endif ?>
-                        <?php endforeach ?>
-                        <li class="sub-category"><a href="<?php echo base_url('products/category/'.$master['slug']) ?>">ทั้งหมด</a></li>
-                    </ul>
-                </li>
+
+
+                <?php  
+
+                    $count_sub = 0;
+                    foreach ($menu_sub_type as $sub) {
+                       if ($master['id'] == $sub['parenttype_id'] && $sub['name'] !=""){
+                        $count_sub++;
+                       }
+                    }
+
+                ?>
+                <?php if ($count_sub == 0): ?>
+                    <li>
+                        <a href="<?php echo base_url('products/category/'.$master['slug']) ?>">
+                            <?php echo $master['name']; ?>
+                        </a>
+                    </li>
+                    
+                <?php else: ?>
+                    <li class="has-sub">
+                        <a href="#">
+                            <?php echo $master['name']; ?>
+                        </a>
+                        <ul class="category-sub">
+                            <?php foreach ($menu_sub_type as $sub): ?>
+                            <?php if ($master['id'] == $sub['parenttype_id'] && $sub['name'] !=""): ?>
+                            <li class="sub-category">
+                                <a href="<?php echo base_url('products/category/'.$sub['slug']) ?>">
+                                    <?php echo  $sub['name']; ?> <span>(<?php echo $sub['count_product'] ?>)</span></a>
+                            </li>
+                            <?php endif ?>
+                            <?php endforeach ?>
+                            <li class="sub-category"><a href="<?php echo base_url('products/category/'.$master['slug']) ?>">ทั้งหมด</a></li>
+                        </ul>
+                    </li>
+                <?php endif ?>
                 <?php endforeach ?>
             </ul>
         </div>

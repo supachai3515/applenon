@@ -72,7 +72,7 @@
                                         <h1 style="font-size: 22px;"><?php echo $slider['name'] ?></h1>
                                         <p><?php echo $slider['description'] ?></p>
                                         <p>
-                                            <a class="btn btn-primary btn-lg" href="<?php echo $slider['link'] ?>"><?php echo $slider['name_link'] ?></a>
+                                            <a class="btn btn-default btn-lg" href="<?php echo $slider['link'] ?>"><?php echo $slider['name_link'] ?></a>
                                         </p>
                                     </div>
                                 </div>
@@ -86,8 +86,9 @@
                     <div class="row">
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="single-banner">
-                                <a href="#">      
-                                 </a>
+                                <a href="<?php echo base_url('tracking');?>">
+                                        <img src="<?php echo base_url('theme');?>/img/banner/banner-tacking.png" alt="">
+                                    </a>
                             </div>
                         </div>
                         <div class="col-sm-4 col-lg-4 col-md-4">
@@ -99,8 +100,9 @@
                         </div>
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="single-banner">
-                                <a href="#">   
-                                </a>
+                                <a href="<?php echo base_url('warranty');?>">
+                                        <img src="<?php echo base_url('theme');?>/img/banner/warranty.png" alt="">
+                                    </a>
                             </div>
                         </div>
                     </div>

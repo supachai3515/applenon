@@ -29,7 +29,7 @@ class Home_model extends CI_Model {
 
 	public function get_content_wordpress()
 	{
-		$sql ="SELECT m.* ,pm.meta_value as image_file, u.display_name FROM (
+		$sql ="SELECT DISTINCT m.* ,pm.meta_value as image_file, u.display_name FROM (
 				SELECT 
 				ID, p.post_author,p.post_content, post_title AS title, p.guid link, post_excerpt AS excerpt ,p.post_date, pm.meta_key ,pm.meta_value as id_file
 				FROM wp_posts p

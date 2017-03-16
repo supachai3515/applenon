@@ -70,7 +70,7 @@
                             <?php endif ?>
                             <br/>
 
-                        <a target="_blank" class="btn btn-xs btn-default" href="<?php echo  $this->config->item('weburl').'/invoice/'.$orders['ref_id'] ?>" role="button">    
+                        <a target="_blank" class="btn btn-xs btn-default" href="<?php echo  $this->config->item('weburl').'invoice/'.$orders['ref_id'] ?>" role="button">    
                                  ดูใบสั่งซื้อ
                                 </a>
                         </td>

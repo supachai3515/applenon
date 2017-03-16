@@ -13,13 +13,13 @@
     <meta name="description" content="<?php echo $header['description'];?>">
     <meta name="keyword" content="<?php echo $header['keyword'];?>" /> 
     <meta name="author" content="<?php echo $header['author'];?>">
-    <meta property="fb:app_id" content=""/>
+    <meta property="fb:app_id" content="1646916948945132"/>
     <title><?php echo $header['title']; ?></title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('theme');?>/img/favicon-2.ico">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,600" type="text/css" media="all" />
     <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Athiti|Kanit:200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Athiti|Kanit|Prompt:300" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('theme');?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url('theme');?>/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url('theme');?>/css/owl.carousel.css">
@@ -166,11 +166,20 @@
                                 <ul>
                                     <li><a href="<?php echo base_url()?>"><i class="fa fa-home"></i></a></li>
                                     <li><a href="<?php echo base_url('products')?>">สินค้า</a></li>
-                                    <li><a href="<?php echo base_url('howtobuy')?>">วิธีการสั่งซื้อ</a></li>
+                                     <li><a href="<?php echo base_url('howtobuy')?>">APPLENON</a>
+                                        <ul class="sub-menu">
+                                           <li><a href="<?php echo base_url('howtobuy')?>">วิธีการสั่งซื้อ</a></li>
+                                           <li><a href="<?php echo base_url('tracking')?>">การจัดส่ง</a></li>
+                                           <li><a href="<?php echo base_url('warranty')?>">การรับประกัน</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="<?php echo base_url('fixmac')?>">รับซ่อม</a></li>
                                     <li><a href="<?php echo base_url('payment')?>">แจ้งชำระเงิน</a></li>
                                     <li><a href="<?php echo base_url('dealer')?>">Dealer</a></li>
                                     <li><a href="<?php echo base_url('content')?>">บทความ</a></li>
+                                    <li><a href="<?php echo base_url('faq')?>">พูดคุย (ถามตอบ)</a></li>
                                     <li><a href="<?php echo base_url('contact')?>">ติดต่อเรา</a></li>
+
                                 </ul>
                             </nav>
                         </div>
@@ -186,14 +195,23 @@
                     <div class="col-md-12">
                         <div class="mobile-menu">
                             <nav id="dropdown">
-                                <ul>
+                                 <ul>
                                     <li><a href="<?php echo base_url()?>"><i class="fa fa-home"></i></a></li>
                                     <li><a href="<?php echo base_url('products')?>">สินค้า</a></li>
-                                    <li><a href="<?php echo base_url('howtobuy')?>">วิธีการสั่งซื้อ</a></li>
+                                     <li><a href="#">APPLENON</a>
+                                        <ul>
+                                           <li><a href="<?php echo base_url('howtobuy')?>">วิธีการสั่งซื้อ</a></li>
+                                           <li><a href="<?php echo base_url('tracking')?>">การจัดส่ง</a></li>
+                                           <li><a href="<?php echo base_url('warranty')?>">การรับประกัน</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="<?php echo base_url('fixmac')?>">รับซ่อม</a></li>
                                     <li><a href="<?php echo base_url('payment')?>">แจ้งชำระเงิน</a></li>
                                     <li><a href="<?php echo base_url('dealer')?>">Dealer</a></li>
                                     <li><a href="<?php echo base_url('content')?>">บทความ</a></li>
+                                    <li><a href="<?php echo base_url('faq')?>">พูดคุย (ถามตอบ)</a></li>
                                     <li><a href="<?php echo base_url('contact')?>">ติดต่อเรา</a></li>
+
                                 </ul>
                             </nav>
                         </div>

@@ -7,10 +7,10 @@
                         <div class="col-sm-3 col-lg-3 col-md-3">
                             <div class="static-book">
                                 <div class="footer-title">
-                                    <h2>BBoyComputer.com</h2>
+                                    <h2>APPLENON</h2>
                                 </div>
                                 <div class="footer-content">
-                                    <p>จำหน่ายอะไหล่  ซ่อม MacBook iMac”</p>
+                                    <p>"รับซ่อม  Macbook iMac  iphone ipad ขายอะไหล่แท้ มือหนึ่ง และมือสอง ซ่อมด่วนรอรับได้เลย เปลี่ยนชิพการ์ดจอ ลง OSX -ซ่อมหน้าจอ LED LCD เมนบอร์ดทุกอาการ"</p>
                                     <span class="author">- Applenon.com -</span>
                                 </div>
                             </div>
@@ -18,7 +18,7 @@
                         <div class="col-sm-3 col-lg-2 col-md-2">
                             <div class="my-account">
                                 <div class="footer-title">
-                                    <h2>BBoyComputer</h2>
+                                    <h2>APPLENON</h2>
                                 </div>
                                 <div class="footer-menu">
                                     <ul>
@@ -95,7 +95,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="copyright">
-                            <p>Copyright &copy; 2016 <a href="<?php echo $this->config->item('weburl') ?>"><?php echo $this->config->item('sitename') ?></a>. All rights reserved.</p>
+                            <p>Copyright &copy; 2016 <a href="<?php echo $this->config->item('weburl') ?>"><?php echo $this->config->item('sitename') ?></a>. All rights reserved. Design By <a href="http://www.wisadev.com" target="_blank">wisadev.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -169,6 +169,10 @@
     <?php echo $this->load->view("template/app");?>
     <?php if(isset($script)){echo $script;}?>
     <?php if(isset($script_file)){echo $this->load->view($script_file); }?>
+
+    <script type="text/javascript">
+    (function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="//static.zotabox.com/3/e/3e0922aab37edb5c8ccd30738b56f73c/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));
+    </script>
 </body>
 
 </html>

@@ -23,20 +23,20 @@
 
             	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             		<img src="<?php echo base_url('theme');?>/img/logo/logo.png" style="width: 200px"/>
-            		<h4>ร้าน B-Boy Computer</h4>
-			  		 พันทิพธ์พลาซ่า งามวงศ์วาน ชั้น 5 ติดศูนย์อาหาร<br>
-			  		086-555-6039 (Truemove-H) , 084-570-5654 (AIS)<br>
-			  		10.30น-20.00น<br>
+            		<h4>APPLENON (แอปเปิ้ลนน)</h4>
+			  		 384/241 หมู่ 2 หมู่บ้านเดอะทรัสต์ซิตี้ <br>
+			  		 ถนนงามวงศ์วาน ตำบลบางเขน อำเภอเมืองนนทบุรี จังหวัด นนทบุรี 11000<br>
+			  		 โทร. 089 525 5225 <br>
 
             	</div>
             	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
-        			<?php if ($order['is_invoice']): ?>
-                        <h2>เลขที่ใบสั่งซื้อ #<?php echo  $order['invoice_docno'];?> </h2>
-                        <strong>วันที่ออก <?php echo $order['invoice_date']?></strong><br/>
+        			<?php if (!$order['is_invoice']): ?>
+                        <h2>เลขที่ใบสั่งซื้อ #<?php echo  $order['id'];?> </h2>
+                        <strong>วันที่ออก <?php echo $order['date']?></strong><br/>
 						กรุณาชำระเงินภายใน 3 วัน 
                     <?php else: ?>
-                       <h2>เลขที่ใบเสนอราคา #<?php echo  $order['id'];?> </h2>
-                       <strong>วันที่ออก <?php echo $order['date']?></strong><br/>
+                       <h2>เลขที่ใบเสนอราคา #<?php echo  $order['invoice_docno'];?> </h2>
+                       <strong>วันที่ออก <?php echo $order['invoice_date']?></strong><br/>
                     <?php endif ?>
 					
             	</div>

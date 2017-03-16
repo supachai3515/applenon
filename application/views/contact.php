@@ -13,7 +13,7 @@
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="our-company">
                     <h2 class="sub-section-title">
-                        Applenon (แอปเปิ้ลนนท์)
+                        Applenon (แอปเปิ้ลนน)
                     </h2>
                     <h3 class="dark">ทางร้านเรามีบริการ จำหน่ายอะไหล่ ซ่อม MacBook iMac</h3>
                     <p>เราใส่ใจในการบริการลูกค้าอย่างจริงจัง เต็มที่กับการให้บริการในทุกเรื่อง ดังนั้นหากท่านมีข้อสงสัยหรือปัญหาใดๆ ท่านสามารถ ที่จะติดต่อ เราผ่านช่องทางการติดต่อต่างๆได้ทันที</p>
@@ -57,8 +57,8 @@
                     <address>
                         <p><i class="fa fa-map-marker"></i> 384/241 หมู่ 2 หมู่บ้านเดอะทรัสต์ซิตี้ ถนนงามวงศ์วาน ตำบลบางเขน อำเภอเมืองนนทบุรี จังหวัด นนทบุรี 11000</p>
                         <p><i class="fa fa-phone"></i> Mobile: 089 525 5225</p>
-                        <p><i class="fa fa-envelope-o"></i> Email: applenon.fix@gmail.com</p>
-                        <p><i class="fa fa-comment"></i> Line Id: @applenon</p>
+                        <p><i class="fa fa-envelope-o"></i> Email: <?php echo $this->config->item('email_owner') ?></p>
+                        <p><i class="fa fa-comment"></i> Line Id: <a href="http://line.me/ti/p/%40applenon" target="_blank">@applenon</a></p>
                         <img src="<?php echo base_url('theme');?>/img/banner/line-at.jpg" class="img-thumbnail img-responsive" alt="Image">
                     </address>
                 </div>

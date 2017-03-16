@@ -26,10 +26,12 @@ class Login extends CI_Controller {
 		
 		if($query)
 		{
+			$userInfo =  $this->account_model->get_user($user);
 			$data = array(
 				'username' => $user,
 				'is_logged_in' => true,
-				'permission' =>'admin'
+				'permission' =>'admin',
+				'permission_id' => $userInfo['permission_id']
 			);
 			$this->session->set_userdata($data);
 			redirect('dashboard');

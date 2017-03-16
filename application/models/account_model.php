@@ -36,6 +36,15 @@ class Account_model extends CI_Model {
 		return $query->row_array();
 	}
 
+	public function get_user($username)
+	{
+
+	    $sql =" SELECT * FROM account  WHERE username = '".$username."'";
+		$re = $this->db->query($sql);
+		return $re->result_array();
+
+	}
+
 	
 }
 /* End of file account_model.php */
