@@ -8,6 +8,7 @@ class Cart extends CI_Controller
         //call model inti 
         $this->load->model('initdata_model');
         $this->load->library('pagination');
+        $this->load->model('cart_model');
     }
 
     public function index()
@@ -24,6 +25,7 @@ class Cart extends CI_Controller
         $data['menus_list']  = $this->initdata_model->get_menu();
         $data['menu_type']   = $this->initdata_model->get_type();
         $data['menu_brands'] = $this->initdata_model->get_brands();
+        $data['cart_list'] = $this->initdata_model->get_cart_data();
         //content file view
         $data['content']     = 'cart';
         // if have file script
@@ -35,58 +37,7 @@ class Cart extends CI_Controller
     public function get_cart()
     {
         $productResult = array();
-        foreach ($this->cart->contents() as $items) {
-            $sql   = "SELECT p.* ,t.name type_name, b.name brand_name
-                FROM  products p 
-                LEFT JOIN product_brand b ON p.product_brand_id = b.id
-                LEFT JOIN product_type t ON p.product_type_id = t.id  WHERE
-                p.is_active = 1 AND p.stock > 0 AND p.id = '" . $items['id'] . "'";
-            $query = $this->db->query($sql);
-            $row   = $query->row_array();
-            if (isset($row['id'])) {
-                $price  = $row["price"];
-                $dis_price  = $row["dis_price"];
-
-                if ($this->session->userdata('is_logged_in') && $this->session->userdata('verify') == "1") {
-
-                    if($this->session->userdata('is_lavel1')) {
-                        if($row["member_discount_lv1"] > 1){
-                            $dis_price = $row["member_discount_lv1"];
-                        }
-                    }
-                    else {
-
-                        if($row["member_discount"] > 1){
-                            $dis_price = $row["member_discount"];
-                        }
-                    }
-                }
-                if ($dis_price < $price ) {
-                    $price = $dis_price;
-                }
-
-                $image_url = "";
-                if ($row['image'] != "") {
-                    $image_url = $this->config->item('url_img') . $row['image'];
-                } else {
-                    $image_url = $this->config->item('no_url_img');
-                }
-                $productResult[] = array(
-                    'id' => $items['id'],
-                    'sku' => $row['sku'],
-                    'slug' => $row['slug'],
-                    'name' => $row['name'],
-                    'img' => $image_url,
-                    'price' => $price,
-                    'qty' => $items['qty'],
-                    'rowid' => $items['rowid'],
-                    'model' => $row['model'],
-                    'brand' => $row['brand_name'],
-                    'is_reservations' => $items['is_reservations'],
-                    'type' => $row['type_name']
-                );
-            }
-        }
+        $productResult  = $this->initdata_model->get_cart_data();
         echo json_encode($productResult, JSON_NUMERIC_CHECK);
     }
 
@@ -166,7 +117,7 @@ class Cart extends CI_Controller
         }
         redirect('cart');
     }
-    
+
     public function delete($rowid)
     {
         $data = array(
@@ -174,6 +125,20 @@ class Cart extends CI_Controller
             'qty' => 0
         );
         $this->cart->update($data);
+        redirect('cart');
+    }
+
+    public function update_cart(){
+        $this->cart_model->validate_update_cart();
+        redirect('cart');
+    }
+    
+    public function show_cart(){
+        $this->load->view('cart/cart');
+    }
+    
+    public function empty_cart(){
+        $this->cart->destroy();
         redirect('cart');
     }
 }

@@ -47,6 +47,7 @@ class Checkout extends CI_Controller {
 		$data['menus_list'] = $this->initdata_model->get_menu();
 		$data['menu_type'] = $this->initdata_model->get_type();
 		$data['menu_brands'] = $this->initdata_model->get_brands();
+		$data['is_tax'] = 0;
 
 
         //content file view
@@ -56,6 +57,57 @@ class Checkout extends CI_Controller {
 		//load layout
 		$this->load->view('template/layout', $data);
 	}
+
+	public function tax()
+	{
+
+		$username_login = array();
+		$isUsername =0;
+		
+		if($this->session->userdata('is_logged_in')) {
+			if($this->session->userdata('permission')=='2' )
+			{
+				$isUsername = 1;
+			    $sql = "SELECT * FROM members WHERE username = '".$this->session->userdata('username')."' ";
+				$query = $this->db->query($sql);
+				$row = $query->row_array();
+	            $username_login = array(
+	                'FullName' => $row['first_name'],
+	                'LastName' => $row['last_name'],
+	                'ARecieve' => $row['address_receipt'],
+	                'Company' => $row['company'],
+	                'AVat' => $row['address_tax'],
+	                'Mobile' => $row['mobile'],
+	                'Nid' => $row['tax_number'],
+	                'Email' => $row['email']
+	            );
+			}
+
+		}
+		$data['username_login'] = $username_login;
+		$data['isUsername'] = $isUsername;
+
+		//header meta tag 
+		$data['header'] = array('title' => 'ยืนยันการสั่งซื้อ | '.$this->config->item('sitename'),
+								'description' =>  'ยืนยันการสั่งซื้อ | '.$this->config->item('tagline'),
+								'author' => $this->config->item('author'),
+								'keyword' =>  'ยืนยันการสั่งซื้อ | '.$this->config->item('tagline') );
+		//get menu database 
+		$this->load->model('initdata_model');
+		$data['menus_list'] = $this->initdata_model->get_menu();
+		$data['menu_type'] = $this->initdata_model->get_type();
+		$data['menu_brands'] = $this->initdata_model->get_brands();
+		$data['is_tax'] = 1;
+
+
+        //content file view
+		$data['content'] = 'checkout';
+		// if have file script
+		//$data['script_file']= "js/product_add_js";
+		//load layout
+		$this->load->view('template/layout', $data);
+	}
+
 
 	public function save()
 	{

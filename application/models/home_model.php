@@ -10,7 +10,7 @@ class Home_model extends CI_Model {
 				LEFT JOIN product_type t ON p.product_type_id = t.id 
 				LEFT JOIN (SELECT product_id, SUM(number) stock_all FROM stock  GROUP BY product_id) s ON s.product_id = p.id 
 				WHERE p.is_active= '1' AND t.is_active='1'
-				ORDER BY p.id DESC LIMIT 0,30"; 
+				ORDER BY p.id DESC LIMIT 0,15"; 
 		$result = $this->db->query($sql);
 		return  $result->result_array();
 	}
@@ -22,7 +22,7 @@ class Home_model extends CI_Model {
 				LEFT JOIN product_type t ON p.product_type_id = t.id 
 				LEFT JOIN (SELECT product_id, SUM(number) stock_all FROM stock  GROUP BY product_id) s ON s.product_id = p.id 
 				WHERE p.is_active= '1' AND t.is_active='1' AND is_hot = 1
-				ORDER BY p.id LIMIT 0,30"; 
+				ORDER BY p.id LIMIT 0,15"; 
 		$result = $this->db->query($sql);
 		return  $result->result_array();
 	}

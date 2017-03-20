@@ -18,7 +18,9 @@
                 <!-- cart start-->
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
-                        <div ng-if="sumTotal() > 0 " class="cart table-responsive">
+                    <?php if ($this->cart->contents()): ?>
+                        <?php echo form_open('cart/update_cart'); ?>
+                        <div class="cart table-responsive">
                             <table>
                                 <thead>
                                     <tr>
@@ -31,64 +33,87 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="item in productItems" ng-if="item.price != '0'">
+                                    <?php $i = 1; ?>
+                                    <?php foreach($this->cart->contents() as $items): ?>
+                                    <?php echo form_hidden('rowid[]', $items['rowid']); ?>
+                                    <?php foreach ($cart_list as $row): ?>
+                                    <?php if ($row['rowid']== $items['rowid']): ?>
+                                    <tr <?php if($i&1){ echo 'class="alt"'; }?>>
                                         <td class="product-img">
-                                            <a href="<?php echo base_url('product/'.'{{item.slug}}') ?>">
-                                                <img src="{{item.img}}" alt="">
+                                            <a href="<?php echo base_url('product/'.$row['slug']) ?>">
+                                                 <img src="<?php echo $row['img']; ?>" class="img-responsive" alt="" width="100">
                                             </a>
                                         </td>
                                         <td class="cart-description">
-                                            <p><a href="<?php echo base_url('product/'.'{{item.slug}}') ?>"><span ng-bind="item.name"></span></a></p>
-                                            <small ng-if="item.sku !='' ">SKU : <span ng-bind="item.sku"></small>
+                                            <p>
+                                                <a href="<?php echo base_url('product/'.$row['slug']) ?>">
+                                                    <?php echo $row['name']; ?>
+                                                </a>
+                                            </p>
+                                            <?php if($row['slug']!=''){ echo '<small >SKU : '.$row['sku'].'</small>'; }?>
                                             <small><span class="label label-success">มีสินค้า</span></small>
-                                        <td>
-                                            <span class="price" ng-bind="item.price | currency:'฿':0"></span>
-                                        </td>
-                                        <td class="product-quantity text-center ">
-                                            <button type="button" ng-click="updateProduct_click_minus(item.rowid)"><i class="fa fa-minus"></i></button>
-                                            <input type="number" step="1" min="0" ng-model="editValue" ng-change="updateProduct_click(item.rowid,editValue)" value="{{item.quantity}}" style="width:50px; height: 30px; text-align:center" />
-                                            <button type="button" ng-click="updateProduct_click_plus(item.rowid)"><i class="fa fa-plus"></i></button>
                                         </td>
                                         <td>
-                                            <span class="price" ng-bind="item.price * item.quantity | currency:'฿':0"></span>
+                                            <span class="price"><?php echo $this->cart->format_number($row['price']); ?></span>
+                                        </td>
+                                        <td>
+                                            <?php echo form_input(array('name' => 'qty[]', 'value' => $row['qty'], 'maxlength' => '3', 'size' => '5')); ?>
+                                        </td>
+                                        <td>
+                                            <span class="price"><?php echo $this->cart->format_number($items['subtotal']); ?></span>
                                         </td>
                                         <td>
                                             <p class="text-center">
-                                                <a href="" ng-click="deleteProduct_click(item.rowid)"><i class="fa fa-trash-o" style="color:#a94442"></i></a>
-                                            </p>                                        
+                                                <a href="<?php echo base_url('cart/delete/'.$row['rowid']) ?>"><i class="fa fa-trash-o" style="color:#a94442"></i></a>
+                                            </p>
                                         </td>
                                     </tr>
+                                    <?php endif ?>
+                                    <?php endforeach ?>
+                                    <?php $i++; ?>
+                                    <?php endforeach; ?>
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <td colspan="2" rowspan="3"></td>
+                                        <td colspan="2" rowspan="4"></td>
                                         <td colspan="3">ราคารวมสินค้า</td>
-                                        <td colspan="2"><span class="price" ng-bind="sumTotal() | currency:'฿':0"></span></td>
+                                        <td colspan="2">
+                                            <?php echo $this->cart->format_number($this->cart->total()); ?>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td colspan="3">ค่าจัดส่งสินค้า</td>
-                                        <td colspan="2"><span class="price" ng-bind="90 | currency:'฿':0"></span></td>
+                                        <td colspan="2">90</span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td colspan="3" class="total"><span>รวมทั้งหมด</span></td>
-                                        <td colspan="2"><span class="total-price" ng-bind="sumTotal() + 90 | currency:'฿':0"></span></td>
+                                        <td colspan="2">
+                                            <?php echo $this->cart->format_number($this->cart->total()+90); ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            <?php echo form_submit('', 'ปรับปรุงตะกร้าสินค้า');?>
+                                        </td>
                                     </tr>
                                 </tfoot>
                             </table>
+                            <?php echo form_close();  ?>
                         </div>
+                    <?php endif ?>
                         <div class="cart-button">
                             <a href="<?php echo base_url('products') ?>">
                                 <i class="fa fa-angle-left"></i> กลับไปเลือกสินค้า
                             </a>
-                            <a class="standard-checkout" ng-if="sumTotal() > 0 " href="<?php echo base_url('checkout') ?>">
-                                <span>
-                                    ยืนยันการสั่งซื้อ
-                                    <i class="fa fa-angle-right"></i>
-                                </span>
-                            </a>
+                            <?php if ($this->cart->total() > 0 ): ?>
+                                <a class="standard-checkout" href="<?php echo base_url('checkout') ?>">
+                                    <span>ยืนยันการสั่งซื้อ <i class="fa fa-angle-right"></i></span>
+                                </a>
+                            <?php endif ?>
                         </div>
                     </div>
-                </div>
+               </div>
                 <!-- breadcrumbs end-->
             </div>
         </div>

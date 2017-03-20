@@ -112,39 +112,62 @@
                             <div class="shopping-cart">
                                 <ul>
                                     <li>
+                                    <?php 
+                                        $productResult = array();
+                                        $productResult  = $this->initdata_model->get_cart_data();
+                                        $sumItems = 0;
+                                        foreach ($productResult  as $r) {
+                                            $sumItems = $sumItems + $r['qty'];
+                                        }
+                                     ?>
                                         <a href="<?php echo base_url('cart') ?>">
                                             <b>ตะกร้าสินค้า</b>
                                             <span class="item">
-                                            <span ng-bind="sumItems()"></span> - ชิ้น
+                                            <span ><?php echo $sumItems; ?></span> - ชิ้น
                                             <span class="total-amu">
-                                                <span ng-bind="sumTotal() | currency:'฿':0"></span>
+                                                <span><?php echo $this->cart->format_number($this->cart->total()); ?></span>
                                             </span>
                                             </span>
                                         </a>
-                                        <div class="mini-cart-content" ng-if="sumTotal() > 1">
-                                            <div class="cart-img-details" ng-repeat="item in productItems" ng-if="item.price != '0'">
-                                                <div class="cart-img-photo">
-                                                    <a href="<?php echo base_url('product/'.'{{item.slug}}') ?>">
-                                                        <img src="{{item.img}}" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="cart-img-contaent">
-                                                    <a href="<?php echo base_url('product/'.'{{item.slug}}') ?>"  ><h4  ng-bind="item.name"></h4></a>
-                                                    <span class="quantity"><span ng-bind="item.quantity"></span> ชิ้น</span>
-                                                    <span ng-bind="item.price | currency:'฿':0"></span>
-                                                </div>
-                                                <div class="pro-del">
-                                                    <a href="" ng-click="deleteProduct_click(item.rowid)"><i class="fa fa-times-circle"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="clear"></div>
-                    
+      
+                                        <?php if ($this->cart->contents()): ?>
+                                            <div class="mini-cart-content">
+                                            
+                                            <?php $i = 1; ?>
+                                            <?php foreach($this->cart->contents() as $items): ?>
+                                                <?php echo form_hidden('rowid[]', $items['rowid']); ?>
+                                                <?php foreach ($productResult as $row): ?>
+                                                    <?php if ($row['rowid']== $items['rowid']): ?>
+                                                        <div class="cart-img-details" >
+                                                            <div class="cart-img-photo">
+                                                                <a href="<?php echo base_url('product/'.$row['slug']) ?>">
+                                                                    <img src="<?php echo $row['img']; ?>" alt="" />
+                                                                </a>
+                                                            </div>
+                                                            <div class="cart-img-contaent">
+                                                                <a href="<?php echo base_url('product/'.$row['slug']) ?>"  ><h4  ng-bind="item.name"></h4></a>
+                                                                <span class="quantity"><?php echo $row['qty'] ?> ชิ้น</span>
+                                                                <span><?php echo $row['price'] ?> </span>
+                                                            </div>
+                                                            <div class="pro-del">
+                                                                <a href="<?php echo base_url('cart/delete/'.$row['rowid']) ?>"><i class="fa fa-times-circle"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                
+                                                    
+                                                    <?php endif ?>
+                                                <?php endforeach ?>
+                                        <?php $i++; ?>
+                                        <?php endforeach; ?>
                                             <div class="cart-inner-bottom">
-                                                <p class="total">รวม: <span class="amount"><span ng-bind="sumTotal() | currency:'฿':0"></span></p>
+                                                <p class="total">รวม: <span class="amount" style="color: #fff;"><?php echo $this->cart->format_number($this->cart->total()); ?></span></p>
                                                 <div class="clear"></div>
                                                 <p class="buttons"><a href="<?php echo base_url('checkout') ?>">ยันยันการสั่งซื้อ</a></p>
                                             </div>
                                         </div>
+                                        <?php endif ?>
+
                                     </li>
                                 </ul>
                             </div>

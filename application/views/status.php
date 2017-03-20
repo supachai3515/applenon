@@ -167,7 +167,7 @@
                                             <tr>
                                                 <td class="product-img">
                                                     <a href="<?php echo base_url('product/'.$value['slug']) ?>">
-                                                <img src="<?php echo $this->config->item('url_img').$value['image']; ?>" alt="">
+                                                <img src="<?php echo $this->config->item('url_img').$value['image']; ?>" alt="" width="100">
                                             </a>
                                                 </td>
                                                 <td class="cart-description">

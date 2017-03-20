@@ -157,7 +157,7 @@
     <script src="<?php echo base_url('theme');?>/custom-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
     <script src="<?php echo base_url('theme');?>/custom-slider/home.js" type="text/javascript"></script>
     <!-- Google Map js -->
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC5AOdM__wv8_dChk55jzPZAspp_ViJWik"></script>
     <!-- plugins js
         ============================================ -->
     <script src="<?php echo base_url('theme');?>/js/plugins.js"></script>

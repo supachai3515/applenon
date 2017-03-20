@@ -101,6 +101,65 @@ class Initdata_model extends CI_Model {
 		$result = $this->db->query($sql);
 		return  $result->row_array();
 	}
+
+	public function get_cart_data()
+	{
+        $productResult = array();
+        foreach ($this->cart->contents() as $items) {
+            $sql   = "SELECT p.* ,t.name type_name, b.name brand_name
+                FROM  products p 
+                LEFT JOIN product_brand b ON p.product_brand_id = b.id
+                LEFT JOIN product_type t ON p.product_type_id = t.id  WHERE
+                p.is_active = 1 AND p.stock > 0 AND p.id = '" . $items['id'] . "'";
+            $query = $this->db->query($sql);
+            $row   = $query->row_array();
+            if (isset($row['id'])) {
+                $price  = $row["price"];
+                $dis_price  = $row["dis_price"];
+
+                if ($this->session->userdata('is_logged_in') && $this->session->userdata('verify') == "1") {
+
+                    if($this->session->userdata('is_lavel1')) {
+                        if($row["member_discount_lv1"] > 1){
+                            $dis_price = $row["member_discount_lv1"];
+                        }
+                    }
+                    else {
+
+                        if($row["member_discount"] > 1){
+                            $dis_price = $row["member_discount"];
+                        }
+                    }
+                }
+                if ($dis_price < $price ) {
+                    $price = $dis_price;
+                }
+
+                $image_url = "";
+                if ($row['image'] != "") {
+                    $image_url = $this->config->item('url_img') . $row['image'];
+                } else {
+                    $image_url = $this->config->item('no_url_img');
+                }
+                $productResult[] = array(
+                    'id' => $items['id'],
+                    'sku' => $row['sku'],
+                    'slug' => $row['slug'],
+                    'name' => $row['name'],
+                    'img' => $image_url,
+                    'price' => $price,
+                    'qty' => $items['qty'],
+                    'rowid' => $items['rowid'],
+                    'model' => $row['model'],
+                    'brand' => $row['brand_name'],
+                    'is_reservations' => $items['is_reservations'],
+                    'type' => $row['type_name']
+                );
+            }
+        }
+
+        return $productResult;
+    }
 }
 
 /* End of file initdata */

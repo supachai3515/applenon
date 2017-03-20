@@ -994,7 +994,6 @@ a:focus, a.link:hover{
     line-height: 21px;
     padding: 18px 30px 18px 27px;
     text-decoration: none;
-    text-transform: uppercase;
     color: #666;
 }
 .category-menu ul li a:hover{

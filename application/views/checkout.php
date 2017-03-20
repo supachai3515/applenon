@@ -1,4 +1,3 @@
-
 <!-- static-right-social-area end-->
 <section class="slider-category-area">
     <div class="container">
@@ -16,73 +15,134 @@
                 </div>
                 <!-- breadcrumbs end-->
                 <div style="padding-bottom: 30px;"></div>
-                <div ng-if="sumTotal() > 0 " class="commerce">
+                <?php if ($this->cart->contents()): ?>
+                    <?php echo form_open('cart/update_cart'); ?>
                     <div class="cart table-responsive">
                         <table>
                             <thead>
                                 <tr>
                                     <th>Product</th>
                                     <th>Description</th>
-                                    <th>Avail.</th>
                                     <th>Unit price</th>
                                     <th>Qty</th>
                                     <th>Total</th>
-                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="item in productItems" ng-if="item.price != '0'">
+                                <?php $i = 1; 
+                                    $productResult = array();
+                                    $productResult  = $this->initdata_model->get_cart_data();
+                                 ?>
+                                <?php foreach($this->cart->contents() as $items): ?>
+                                <?php echo form_hidden('rowid[]', $items['rowid']); ?>
+                                <?php foreach ($productResult as $row): ?>
+                                <?php if ($row['rowid']== $items['rowid']): ?>
+                                <tr <?php if($i&1){ echo 'class="alt"'; }?>>
                                     <td class="product-img">
-                                        <a href="<?php echo base_url('product/'.'{{item.slug}}') ?>">
-                                            <img src="{{item.img}}" alt="">
+                                        <a href="<?php echo base_url('product/'.$row['slug']) ?>">
+                                             <img src="<?php echo $row['img']; ?>" class="img-responsive" alt="" width="100">
                                         </a>
                                     </td>
                                     <td class="cart-description">
-                                        <p><a href="<?php echo base_url('product/'.'{{item.slug}}') ?>"><span ng-bind="item.name"></span></a></p>
-                                        <small ng-if="item.sku !='' ">sku: <span ng-bind="item.sku"></small>
+                                        <p>
+                                            <a href="<?php echo base_url('product/'.$row['slug']) ?>">
+                                                <?php echo $row['name']; ?>
+                                            </a>
+                                        </p>
+                                        <?php if($row['slug']!=''){ echo '<small >SKU : '.$row['sku'].'</small>'; }?>
+                                        <small><span class="label label-success">มีสินค้า</span></small>
                                     </td>
                                     <td>
-                                        <span class="label-success">มีสินค้า</span>
+                                        <span class="price"><?php echo $this->cart->format_number($row['price']); ?></span>
                                     </td>
                                     <td>
-                                        <span class="price" ng-bind="item.price | currency:'฿':0"></span>
-                                    </td>
-                                    <td class="product-quantity text-center ">
-                                        <button type="button" ng-click="updateProduct_click_minus(item.rowid)"><i class="fa fa-minus"></i></button>
-                                        <input type="number" step="1" min="0" ng-model="editValue" ng-change="updateProduct_click(item.rowid,editValue)" value="{{item.quantity}}" style="width:50px; height: 30px; text-align:center" />
-                                        <button type="button" ng-click="updateProduct_click_plus(item.rowid)"><i class="fa fa-plus"></i></button>
+                                        <span class="price"><?php echo $row['qty']; ?></span>
                                     </td>
                                     <td>
-                                        <span class="price" ng-bind="item.price * item.quantity | currency:'฿':0"></span>
-                                    </td>
-                                    <td>
-                                        <a href="" ng-click="deleteProduct_click(item.rowid)"><i class="fa fa-trash-o"></i></a>
+                                        <span class="price"><?php echo $this->cart->format_number($items['subtotal']); ?></span>
                                     </td>
                                 </tr>
+                                <?php endif ?>
+                                <?php endforeach ?>
+                                <?php $i++; ?>
+                                <?php endforeach; ?>
                             </tbody>
+                            <?php if ($is_tax == 0 ): ?>
                             <tfoot>
                                 <tr>
-                                    <td colspan="2" rowspan="3"></td>
-                                    <td colspan="3">ราคารวมสินค้า</td>
-                                    <td colspan="2"><span class="price" ng-bind="sumTotal() | currency:'฿':0"></span></td>
-                                </tr>
-                                <tr ng-if="caltax() > 1">
-                                    <td colspan="3">ภาษีมูลค่าเพิ่ม 7%</td>
-                                    <td colspan="2"><span class="price" ng-bind="caltax() | currency:'฿':0"></span></td>
+                                    <td colspan="2" rowspan="4"></td>
+                                    <td colspan="2">ราคารวมสินค้า</td>
+                                    <td colspan="2">
+                                        <?php echo $this->cart->format_number($this->cart->total()); ?>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3">ค่าจัดส่งสินค้า</td>
-                                    <td colspan="2"><span class="price" ng-bind="90 | currency:'฿':0"></span></td>
+                                    <td colspan="2">ค่าจัดส่งสินค้า</td>
+                                    <td colspan="2">90</span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td ng-if="caltax() > 1" colspan="5" class="total"><span>รวมทั้งหมด</span></td>
-                                     <td ng-if="caltax() < 1" colspan="3" class="total"><span>รวมทั้งหมด</span></td>
-                                    <td colspan="2"><span class="total-price" ng-bind="( (90+sumTotal() )+caltax() ) | currency:'฿':0"></span></td>
+                                    <td colspan="2" class="total"><span>รวมทั้งหมด</span></td>
+                                    <td colspan="2">
+                                        <?php echo $this->cart->format_number($this->cart->total()+90); ?>
+                                    </td>
                                 </tr>
                             </tfoot>
-                        </table>
-                    </div>
+                            <?php else: ?>
 
+                                <tfoot>
+                                <tr>
+                                    <td colspan="2" rowspan="5"></td>
+                                    <td colspan="2">ราคารวมสินค้า</td>
+                                    <td colspan="2">
+                                        <?php echo $this->cart->format_number($this->cart->total()); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">ภาษีมูลค่าเพิ่ม 7%</td>
+                                    <td colspan="2"><?php echo $this->cart->format_number($this->cart->total()*0.07); ?></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">ค่าจัดส่งสินค้า</td>
+                                    <td colspan="2">90</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="total"><span>รวมทั้งหมด</span></td>
+                                    <td colspan="2">
+                                        <?php echo $this->cart->format_number($this->cart->total()+90+($this->cart->total()*0.07)); ?>
+                                    </td>
+                                </tr>
+                            </tfoot>
+
+
+                            <?php endif ?>
+                        </table>
+                        <?php echo form_close();  ?>
+                    </div>
+                    <div class="cart-button">
+                    <?php if ($is_tax == 0 ): ?>
+                        <a href="<?php echo base_url('cart') ?>">
+                                <i class="fa fa-angle-left"></i> กลับไปแก้ไขสินค้า
+                            </a>
+                        <a class="standard-checkout" href="<?php echo base_url('checkout/tax') ?>">
+                            <span>ออกใบกำกับภาษี <i class="fa fa-file-text-o"></i></span>
+                        </a>
+                       
+                    <?php else: ?>
+                      <a href="<?php echo base_url('cart') ?>">
+                                <i class="fa fa-angle-left"></i> กลับไปแก้ไขสินค้า
+                            </a>
+                        <a class="standard-checkout" href="<?php echo base_url('checkout') ?>">
+                            <span>ยกเลิกการออกใบกำกับภาษี<i class="fa fa-file-text-o"></i></span>
+                        </a>
+                    <?php endif ?>
+                     </div>
+                <?php endif ?>
+                <div style="padding-bottom: 30px;"></div>
+                <div class="commerce">
+                    
                     <div class="head-search">
 
                         <div class="product-description">
@@ -98,17 +158,23 @@
                               <fieldset>
 
                               <!-- Multiple Radios -->
-                              <div class="form-group ">
+                              <div class="form-group " hidden="true">
                                 <label class="col-md-4 control-label" for="purchase">รูปแบบการออกใบเสร็จ</label>
                                 <div class="col-md-4">
-
-                                 <label><input type="checkbox" name="purchase" id="p2" ng-change="caltaxReceipt(tax)" ng-model="tax" /> ใบกำกับภาษี</label><br />
+                                        
+                                       <?php if ($is_tax == 0 ): ?>
+                                            <label><input type="checkbox" name="purchase" id="p2"> ใบกำกับภาษี</label><br />
+                                        <?php else: ?>
+                                            <label><input type="checkbox" name="purchase" id="p2" checked> ใบกำกับภาษี</label><br />
+                                        <?php endif ?>
+                                 
 
                                 </div>
                               </div>
 
-                              <!-- Text input-->
-                              <div class="form-group" ng-if="caltax() > 1">
+                            <?php if ($is_tax == 1): ?>
+                                <!-- Text input-->
+                              <div class="form-group">
                                 <label class="col-md-4 control-label" for="company">ชื่อบริษัท / ร้าน</label>  
                                 <div class="col-md-4">
                                 <?php if( $isUsername == 1) {?>
@@ -122,7 +188,7 @@
 
 
                               <!-- Textarea -->
-                              <div class="form-group" ng-if="caltax() > 1">
+                              <div class="form-group">
                                 <label class="col-md-4 control-label" for="purchase_address">ชื่อ / ที่อยู่สำหรับออกใบกำกับภาษี</label>
                                 <div class="col-md-4">
                                   <?php if( $isUsername == 1) {?>
@@ -134,7 +200,7 @@
                               </div>
 
                               <!-- Text input-->
-                              <div class="form-group" ng-if="caltax() > 1">
+                              <div class="form-group" >
                                 <label class="col-md-4 control-label" for="IDCARD">เลขประจำตัวผู้เสียภาษี</label>  
                                 <div class="col-md-4">
                                 <?php if( $isUsername == 1) {?>
@@ -147,6 +213,9 @@
                               </div>
 
 
+                            <?php endif ?>
+
+                             
                               <!-- Text input-->
                               <div class="form-group">
                                 <label class="col-md-4 control-label" for="textinput">ชื่อผู้รับ</label>  

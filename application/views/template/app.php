@@ -354,7 +354,7 @@ app.controller('mainCtrl', function($scope,$http) {
         $scope.ckeckoutSubmit = function() {        
            
                  $scope.isProscess = true;
-         $scope.message_prosecss = "กรุณารอ...";
+            $scope.message_prosecss = "กรุณารอ...";
             console.log($scope.paymentMessage);
 
                   $http({
@@ -365,9 +365,7 @@ app.controller('mainCtrl', function($scope,$http) {
              },
                 data:$scope.paymentMessage
             }).success(function(data) {
-                 $scope.isProscess = false;
-                $scope.message_prosecss = 'ส่งข้อความสำเร็จ';
-
+                
                 console.log(data);
            });
        }
