@@ -13,7 +13,8 @@
 </div><!-- .mobile-bg-fix-wrap -->
 
 
-  <footer>
+<!-- logo-brand-area-end --><!-- footer-area-start -->
+    <footer>
         <section class="footer-area">
             <div class="container">
                 <div class="row">
@@ -21,25 +22,25 @@
                         <div class="col-sm-3 col-lg-3 col-md-3">
                             <div class="static-book">
                                 <div class="footer-title">
-                                    <h2>BBoyComputer.com</h2>
+                                    <h2>APPLENON</h2>
                                 </div>
                                 <div class="footer-content">
-                                    <p>จำหน่าย ขาย อะไหล่โน๊ตบุ๊ค battery notebook,  keyboard notebook, adaptor notebook, LCD LED notebook,DVD notebook, รับซ่อม notebook”</p>
-                                    <span class="author">- BBoyComputer.com -</span>
+                                    <p>"รับซ่อม  Macbook iMac  iphone ipad ขายอะไหล่แท้ มือหนึ่ง และมือสอง ซ่อมด่วนรอรับได้เลย เปลี่ยนชิพการ์ดจอ ลง OSX -ซ่อมหน้าจอ LED LCD เมนบอร์ดทุกอาการ"</p>
+                                    <span class="author">- Applenon.com -</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-3 col-lg-2 col-md-2">
                             <div class="my-account">
                                 <div class="footer-title">
-                                    <h2>BBoyComputer</h2>
+                                    <h2>APPLENON</h2>
                                 </div>
                                 <div class="footer-menu">
                                     <ul>
-                                        <li><a href="http://www.hotelsupply.in.th/howtobuy">วิธีการสั่งซื้อ</a></li>
-                                        <li><a href="http://www.hotelsupply.in.th/payment">วีธีแจ้งชำระเงิน</a></li>
-                                        <li><a href="http://www.hotelsupply.in.th/dealer">Dealer</a></li>
-                                         <li><a href="http://www.hotelsupply.in.th/content">บทความ</a></li>
+                                        <li><a href="http://www.applenon.com/howtobuy">วิธีการสั่งซื้อ</a></li>
+                                        <li><a href="http://www.applenon.com/payment">วีธีแจ้งชำระเงิน</a></li>
+                                        <li><a href="http://www.applenon.com/dealer">Dealer</a></li>
+                                         <li><a href="http://www.applenon.com/content">บทความ</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -51,14 +52,8 @@
                                 </div>
                                 <div class="footer-menu">
                                     <ul>
-                                                                                                                            <li><a href="http://www.hotelsupply.in.th/products/category/%e0%b8%95%e0%b8%b9%e0%b9%89">
-                                            ตู้ ()
-                                        </a></li>
-                                            
-                                                                                
-                                                                                                                            <li><a href="http://www.hotelsupply.in.th/products/category/%e0%b9%80%e0%b8%95%e0%b8%b5%e0%b8%a2%e0%b8%87%e0%b8%99%e0%b8%ad%e0%b8%99">
-                                            เตียงนอน ()
-                                        </a></li>
+                                                                                                                            <li><a href="http://www.applenon.com/products/category/apple">
+                                            Apple แอปเปิ้ล                                        </a></li>
                                             
                                                                                 
                                                                             </ul>
@@ -73,7 +68,6 @@
                                 <div class="footer-menu">
                                     <ul>
                                                                                                                         
-                                                                                                                        
                                                                             </ul>
                                 </div>
                             </div>
@@ -85,13 +79,12 @@
                                 </div>
                                 <div class="store-content">
                                     <ul>
-                                        <li>ร้าน B-Boy Computer พันทิพธ์พลาซ่า งามวงศ์วาน ชั้น 5 ติดศูนย์อาหาร</li>
-                                        <li>ปรึกษา สอบถามสินค้า : <span>086 555 6039</span> </li>
-                                        <li><a href="https://www.facebook.com/%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B8%88%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%84-%E0%B9%81%E0%B8%9A%E0%B8%95%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%88-Notebook-bboycomputer-1563145163982000/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
+                                        <li>384/241 หมู่ 2 หมู่บ้านเดอะทรัสต์ซิตี้ ถนนงามวงศ์วาน ตำบลบางเขน อำเภอเมืองนนทบุรี จังหวัด นนทบุรี 11000</li>
+                                        <li><a href="https://www.facebook.com/applehomefix/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
                                     </ul>
                                 </div>
                                 <div class="footer-payment">
-                                    <img alt="" src="http://www.hotelsupply.in.th/theme/img/payment-new.png">
+                                    <img alt="" src="http://www.applenon.com/theme/img/payment-new.png">
                                 </div>
                             </div>
                         </div>
@@ -104,7 +97,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="copyright">
-                            <p>Copyright &copy; 2016 <a href="http://www.hotelsupply.in.th/">HotelSupply</a>. All rights reserved.</p>
+                            <p>Copyright &copy; 2016 <a href="http://www.applenon.com/">รับซ่อม  Macbook iMac  iphone ipad ขายอะไหล่แท้ มือหนึ่งและมือสอง - APPLENON (แอปเปิ้ลนน)</a>. All rights reserved. Design By <a href="http://www.wisadev.com" target="_blank">wisadev.com</a></p>
                         </div>
                     </div>
                 </div>
