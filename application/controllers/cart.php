@@ -9,6 +9,7 @@ class Cart extends CI_Controller
         $this->load->model('initdata_model');
         $this->load->library('pagination');
         $this->load->model('cart_model');
+        session_start();
     }
 
     public function index()
@@ -97,10 +98,10 @@ class Cart extends CI_Controller
                 )
             );
             $this->cart->insert($data);
-            redirect('cart');
+            redirect('cart','refresh');
         }
         else {
-            redirect('products');
+            redirect('products','refresh');
         }
     }
 
@@ -115,7 +116,7 @@ class Cart extends CI_Controller
             $this->cart->update($data);
             $i++;
         }
-        redirect('cart');
+        redirect('cart','refresh');
     }
 
     public function delete($rowid)
@@ -125,12 +126,12 @@ class Cart extends CI_Controller
             'qty' => 0
         );
         $this->cart->update($data);
-        redirect('cart');
+        redirect('cart','refresh');
     }
 
     public function update_cart(){
         $this->cart_model->validate_update_cart();
-        redirect('cart');
+        redirect('cart','refresh');
     }
     
     public function show_cart(){
