@@ -6,9 +6,8 @@
         </div>
         <div class="category-menu" id="cate-toggle">
             <ul>
+
                 <?php foreach ($menu_type as $master): ?>
-
-
                 <?php  
 
                     $count_sub = 0;
@@ -25,7 +24,6 @@
                             <?php echo $master['name']; ?>
                         </a>
                     </li>
-                    
                 <?php else: ?>
                     <li class="has-sub">
                         <a href="#">
@@ -33,12 +31,38 @@
                         </a>
                         <ul class="category-sub">
                             <?php foreach ($menu_sub_type as $sub): ?>
-                            <?php if ($master['id'] == $sub['parenttype_id'] && $sub['name'] !=""): ?>
-                            <li class="sub-category">
-                                <a href="<?php echo base_url('products/category/'.$sub['slug']) ?>">
-                                    <?php echo  $sub['name']; ?> <span>(<?php echo $sub['count_product'] ?>)</span></a>
-                            </li>
-                            <?php endif ?>
+                                <?php if ($master['id'] == $sub['parenttype_id'] && $sub['name'] !=""): ?>
+
+                                    <?php  
+                                        $sub_3_count = 0;
+                                        foreach ($menu_sub_type as $sub_3) {
+                                           if ($sub['id'] == $sub_3['parenttype_id'] && $sub_3['name'] !=""){
+                                            $sub_3_count++;
+                                           }
+                                        }
+                                    ?>
+                                    <?php if ($sub_3_count == 0): ?>
+                                        <li class="sub-category">
+                                            <a href="<?php echo base_url('products/category/'.$sub['slug']) ?>">
+                                                <?php echo  $sub['name']; ?> <span>(<?php echo $sub['count_product'] ?>)</span></a>
+                                        </li>
+                                    <?php else: ?>
+                                        <li class="has-sub"><a href="#"><?php echo $sub['name']; ?></a>
+                                            <ul>
+                                            <?php foreach ($menu_sub_type as $sub_3_item): ?>
+                                                <?php if ($sub['id'] == $sub_3_item['parenttype_id']): ?>
+                                                     
+                                                <li><a href="<?php echo base_url('products/category/'.$sub_3_item['slug']) ?>">
+                                                <?php echo  $sub_3_item['name']; ?> <span>(<?php echo $sub_3_item['count_product'] ?>)</span></a></li>
+                                                        
+                                                <?php endif ?>
+                                              
+                                            <?php endforeach ?>
+                                                <li class="sub-category"><a href="<?php echo base_url('products/category/'.$sub['slug']) ?>">ทั้งหมด</a></li>
+                                            </ul>
+                                        </li>
+                                    <?php endif ?>
+                                <?php endif ?>
                             <?php endforeach ?>
                             <li class="sub-category"><a href="<?php echo base_url('products/category/'.$master['slug']) ?>">ทั้งหมด</a></li>
                         </ul>

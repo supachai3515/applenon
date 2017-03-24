@@ -83,7 +83,7 @@ class Cart extends CI_Controller
                     }
                 }
             }
-            if ($dis_price < $price ) {
+            if ($dis_price < $price  &&  $dis_price > 0) {
                 $price = $dis_price;
             }
 
